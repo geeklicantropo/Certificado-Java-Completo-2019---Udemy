@@ -1,0 +1,30 @@
+package exerciciosPropostos;
+
+import java.util.Scanner;
+
+public class CalculaHoradeJogo
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int horaInicial = sc.nextInt();
+		int horaFinal = sc.nextInt();
+		
+		int duracao;
+		
+		if(horaFinal <= horaInicial)
+			duracao = (horaFinal - horaInicial) + 24;
+		else
+			duracao = horaFinal - horaInicial;
+		
+		if(duracao == 1)
+			System.out.println("O jogo durou " + duracao + " hora.");
+		else
+			System.out.println("O jogo durou " + duracao + " horas.");
+		
+		sc.close();
+	}
+
+}
